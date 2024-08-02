@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm - TrustSend</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light container">
+        <a class="navbar-brand" href="index.html">TrustSend</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="transfer.html">Global Transfers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="wallet.html">My Wallet</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-primary text-white" href="register.html">REGISTER!</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="container py-5">
+        <h1 class="mb-4">Transaction Confirmation</h1>
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Transfer Details</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex justify-content-between">
+                                <span>Amount Sent:</span>
+                                <strong id="amountSent">$1000.00</strong>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between">
+                                <span>Amount Received:</span>
+                                <strong id="amountReceived">MYR 4180.00</strong>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between">
+                                <span>Exchange Rate:</span>
+                                <span id="exchangeRate">1 USD = 4.18 MYR</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between">
+                                <span>Transfer Fee:</span>
+                                <span id="transferFee">$5.00</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between">
+                                <span>Total Charged:</span>
+                                <strong id="totalCharged">$1005.00</strong>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card mt-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Recipient Information</h5>
+                        <p><strong>Name:</strong> <span id="recipientName">John Doe</span></p>
+                        <p><strong>Bank:</strong> <span id="recipientBank">Bank of Malaysia</span></p>
+                        <p><strong>Account Number:</strong> <span id="recipientAccount">****1234</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Transaction Summary</h5>
+                        <p><strong>Transfer Method:</strong> <span id="transferMethod">Bank Transfer</span></p>
+                        <p><strong>Estimated Time:</strong> <span id="estimatedTime">1-2 business days</span></p>
+                        <p><strong>Reference Number:</strong> <span id="referenceNumber">TRS12345678</span></p>
+                        <button id="confirmTransfer" class="btn btn-primary btn-lg w-100 mt-3">Confirm Transfer</button>
+                        <button id="editTransfer" class="btn btn-secondary w-100 mt-2">Edit Transfer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>TrustSend</h5>
+                    <p>Empowering global remittance through technology and trust.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+                        <li class="list-inline-item"><a href="#">Terms of Service</a></li>
+                        <li class="list-inline-item"><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

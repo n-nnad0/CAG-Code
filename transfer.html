@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Transfers - TrustSend</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light container">
+        <a class="navbar-brand" href="index.html">TrustSend</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="transfer.html">Global Transfers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="wallet.html">My Wallet</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-primary text-white" href="register.html">REGISTER!</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="container py-5">
+        <h1 class="mb-4">Global Transfers</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <form id="transferForm">
+                    <div class="mb-3">
+                        <label for="transferMethod" class="form-label">Transfer Method</label>
+                        <select class="form-select" id="transferMethod" required>
+                            <option value="">Select a method</option>
+                            <option value="bank">Bank Transfer</option>
+                            <option value="mobile">Mobile Wallet</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="sendAmount" class="form-label">Amount to Send</label>
+                        <input type="number" class="form-control" id="sendAmount" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="receiveAmount" class="form-label">Amount to Receive</label>
+                        <input type="number" class="form-control" id="receiveAmount" readonly>
+                    </div>
+                    <div class="mb-3">
+                        <p>Transfer Fee: <span id="transferFee">0.00</span></p>
+                        <p>Estimated Time: <span id="transferTime">--</span></p>
+                    </div>
+                    <div class="mb-3">
+                        <p>Exchange Rate: <span id="exchangeRate">--</span></p>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Continue</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Why Choose TrustSend?</h5>
+                        <ul class="list-unstyled">
+                            <li>✅ Fast</li>
+                            <li>🔒 Secure</li>
+                            <li>🌍 Available Anywhere!</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <h5>Customer Reviews</h5>
+                    <!-- Add a carousel or list of reviews here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>TrustSend</h5>
+                    <p>Empowering global remittance through technology and trust.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+                        <li class="list-inline-item"><a href="#">Terms of Service</a></li>
+                        <li class="list-inline-item"><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
