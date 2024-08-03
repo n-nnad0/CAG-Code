@@ -1,102 +1,294 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- I declare that this code was written by me. 
+ I will not copy or allow others to copy my code. 
+ I understand that copying code is considered as plagiarism.
+ 
+ Student Name: NUR NIKI NADHILA BINTE MOHAMED ASRI
+ Student ID: 23021911
+ Class: W65F
+ Date/Time Last modified: 03/08/2024
+-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Global Transfers - TrustSend</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .navbar {
+        background-color: #131e3d;
+        padding: 0;
+        }
+        .navbar-content {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 10px 0;
+        }
+        .navbar-nav {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 1200px;
+        padding: 0 20px;
+        }
+        .navbar-nav .nav-item {
+        flex: 1;
+        text-align: center;
+        }
+        .navbar-nav .nav-link {
+        color: #cdad7d;
+        font-family: 'Libre Baskerville', serif;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        padding: 10px 0;
+        white-space: nowrap;
+        }
+        .navbar::before,
+        .navbar::after {
+        content: '';
+        display: block;
+        height: 5px;
+        background-color: #cdad7d;
+        }
+        @media (max-width: 768px) {
+        .navbar-nav {
+        flex-direction: column;
+        }
+        .navbar-nav .nav-item {
+        margin-bottom: 10px;
+        }
+        }
+        body {
+            background-color: #f4f1ec;
+        }
+        .transfer-container {
+        background-color: #e8d1ae;
+        border-radius: 20px;
+        padding: 20px;
+        width: 400px;
+        margin: 0 auto;
+        }
+        h2 {
+        color: #1a1a2e;
+        text-align: center;
+        margin-bottom: 20px;
+        }
+
+        .dropdown {
+        margin-bottom: 20px;
+        }
+
+        .dropdown-toggle {
+        width: 100%;
+        padding: 10px;
+        background-color: white;
+        border: 2px solid #1a1a2e;
+        border-radius: 5px;
+        text-align: left;
+        }
+
+        .transfer-box {
+        display: flex;
+        align-items: center;
+        background-color: white;
+        border: 2px solid #1a1a2e;
+        border-radius: 25px;
+        margin-bottom: 15px;
+        overflow: hidden;
+        }
+
+        .transfer-box span {
+        padding: 10px;
+        color: #1a1a2e;
+        }
+
+        .transfer-box input {
+        flex-grow: 1;
+        border: none;
+        padding: 10px;
+        font-size: 18px;
+        }
+
+        .currency-select {
+        background-color: #1a1a2e;
+        color: white;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        }
+
+        .transfer-info {
+        margin-bottom: 15px;
+        }
+
+        .transfer-info .highlight {
+        color: #ff0000;
+        }
+
+        .exchange-rate {
+        background-color: #d1b78f;
+        border-radius: 15px;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+        }
+
+        .confirm-button {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        font-size: 18px;
+        cursor: pointer;
+        float: right;
+        }
+
+        .currency-select {
+        background-color: #1a1a2e;
+        color: white;
+        border: none;
+        padding: 10px;
+        width: auto;
+        min-width: 80px;
+        }
+
+        .currency-select option {
+        background-color: white;
+        color: #1a1a2e;
+        }
+    </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light container">
-        <a class="navbar-brand" href="index.html">TrustSend</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html">About Us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="transfer.html">Global Transfers</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="wallet.html">My Wallet</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link btn btn-primary text-white" href="register.html">REGISTER!</a>
-                </li>
-            </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">ABOUT US</a>
+                    </li>
+                    <li class="nav-item mx-4">
+                        <a class="nav-link" href="transfer.html">GLOBAL TRANSFERS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="wallet.html">MY WALLET</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
-    <section class="container py-5">
-        <h1 class="mb-4">Global Transfers</h1>
-        <div class="row">
-            <div class="col-md-6">
-                <form id="transferForm">
-                    <div class="mb-3">
-                        <label for="transferMethod" class="form-label">Transfer Method</label>
-                        <select class="form-select" id="transferMethod" required>
-                            <option value="">Select a method</option>
-                            <option value="bank">Bank Transfer</option>
-                            <option value="mobile">Mobile Wallet</option>
-                        </select>
-                    </div>
-                    <div class="mb-3">
-                        <label for="sendAmount" class="form-label">Amount to Send</label>
-                        <input type="number" class="form-control" id="sendAmount" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="receiveAmount" class="form-label">Amount to Receive</label>
-                        <input type="number" class="form-control" id="receiveAmount" readonly>
-                    </div>
-                    <div class="mb-3">
-                        <p>Transfer Fee: <span id="transferFee">0.00</span></p>
-                        <p>Estimated Time: <span id="transferTime">--</span></p>
-                    </div>
-                    <div class="mb-3">
-                        <p>Exchange Rate: <span id="exchangeRate">--</span></p>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Continue</button>
-                </form>
-            </div>
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Why Choose TrustSend?</h5>
-                        <ul class="list-unstyled">
-                            <li>✅ Fast</li>
-                            <li>🔒 Secure</li>
-                            <li>🌍 Available Anywhere!</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="mt-4">
-                    <h5>Customer Reviews</h5>
-                    <!-- Add a carousel or list of reviews here -->
-                </div>
-            </div>
-        </div>
-    </section>
+    <div class="container mt-5">
+        <div class="transfer-container">
+          <h2>Method?</h2>
+          <select class="form-select mb-3 text-center" aria-label="Transfer method selection">
+            <option selected>Mobile Wallet</option>
+            <option value="1">Bank Transfer</option>
+            <option value="2">Cash Pickup</option>
+            <option value="3">Digital Currency</option>
+            <option value="4">NGO Partnership</option>
+          </select>
 
-    <footer class="bg-dark text-white py-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h5>TrustSend</h5>
-                    <p>Empowering global remittance through technology and trust.</p>
-                </div>
-                <div class="col-md-6 text-md-end">
-                    <ul class="list-inline">
-                        <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
-                        <li class="list-inline-item"><a href="#">Terms of Service</a></li>
-                        <li class="list-inline-item"><a href="#">Contact Us</a></li>
-                    </ul>
-                </div>
-            </div>
+          <div class="transfer-box mb-3">
+            <span>Send</span>
+            <input type="number" value="100" class="form-control" />
+            <select class="currency-select form-select">
+              <option value="SGD" selected>SGD</option>
+              <option value="MYR">MYR</option>
+              <option value="IDR">IDR</option>
+              <option value="PHP">PHP</option>
+              <option value="KHR">KHR</option>
+              <option value="BDT">BDT</option>
+            </select>
+          </div>
+          
+          <div class="transfer-box mb-3">
+            <span>Receive</span>
+            <input type="number" value="" class="form-control" readonly />
+            <select class="currency-select form-select">
+              <option value="SGD">SGD</option>
+              <option value="MYR" selected>MYR</option>
+              <option value="IDR">IDR</option>
+              <option value="PHP">PHP</option>
+              <option value="KHR">KHR</option>
+              <option value="BDT">BDT</option>
+            </select>
+          </div>
+
+          <div class="transfer-info mb-3">
+            <p>Transfer Fee: 1 SGD</p>
+            <p>Transfer Time: <span class="text-danger">Same day</span></p>
+          </div>
+          
+          <div class="exchange-rate mb-3">
+            <span>Exchange Rate</span>
+            <span>1 SGD = 3.39 MYR</span>
+          </div>
+          
+          <button class="btn btn-success w-100">Confirm</button>
         </div>
-    </footer>
+    </div>
+
+    <script>
+        const exchangeRates = {
+            SGD: 1,
+            MYR: 3.39,
+            IDR: 12205.14,
+            PHP: 43.66,
+            KHR: 3089.16,
+            BDT: 88.18
+        };
+    
+        function performConversion() {
+            const sendInput = document.querySelector('.transfer-box:nth-of-type(1) input');
+            const receiveInput = document.querySelector('.transfer-box:nth-of-type(2) input');
+            const sendAmount = parseFloat(sendInput.value);
+            sendCurrency = document.querySelector('.transfer-box:nth-of-type(1) .currency-select').value;
+            receiveCurrency = document.querySelector('.transfer-box:nth-of-type(2) .currency-select').value;
+    
+            console.log('Send Amount:', sendAmount);
+            console.log('Send Currency:', sendCurrency);
+            console.log('Receive Currency:', receiveCurrency);
+    
+            if (isNaN(sendAmount)) {
+                receiveInput.value = '';
+                return;
+            }
+    
+            // Convert to SGD first (assuming SGD is our base currency)
+            const amountInSGD = sendCurrency === 'SGD' ? sendAmount : sendAmount / exchangeRates[sendCurrency];
+    
+            // Convert from SGD to receive currency
+            const receiveAmount = amountInSGD * exchangeRates[receiveCurrency];
+    
+            console.log('Receive Amount:', receiveAmount);
+    
+            // Update receive input
+            receiveInput.value = receiveAmount.toFixed(2);
+    
+            // Update exchange rate display
+            const exchangeRate = (exchangeRates[receiveCurrency] / exchangeRates[sendCurrency]).toFixed(4);
+            document.querySelector('.exchange-rate').innerHTML = 
+                `Exchange Rate: 1 ${sendCurrency} = ${exchangeRate} ${receiveCurrency}`;
+    
+            // Update transfer fee (1% of send amount, minimum 1 SGD)
+            const fee = Math.max(1, sendAmount * 0.01);
+            document.querySelector('.transfer-info p:first-child').textContent = 
+                `Transfer Fee: ${fee.toFixed(2)} ${sendCurrency}`;
+        }
+    
+        // Add event listeners
+        document.querySelector('.transfer-box:nth-of-type(1) input').addEventListener('input', performConversion);
+        document.querySelectorAll('.currency-select').forEach(select => {
+            select.addEventListener('change', performConversion);
+        });
+    
+        // Initialize conversion
+        document.addEventListener('DOMContentLoaded', performConversion);
+    </script>
 </body>
 </html>
