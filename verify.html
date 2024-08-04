@@ -147,29 +147,9 @@
         </div>
         
         <p class="resend"><a href="#">Resend code</a></p>
-        
-        <button class="btn-confirm">Confirm</button>
+
+        <a href="confirm.html" style="text-decoration: none;">
+            <button class="btn btn-confirm" type="button">Confirm</button>
+        </a>
     </div>
-
-    <script>
-        // JavaScript to handle input behavior
-        const inputs = document.querySelectorAll('.code-input input');
-        inputs.forEach((input, index) => {
-            input.addEventListener('input', function() {
-                if (this.value.length === 1) {
-                    if (index < inputs.length - 1) {
-                        inputs[index + 1].focus();
-                    }
-                }
-            });
-
-            input.addEventListener('keydown', function(e) {
-                if (e.key === 'Backspace' && !this.value) {
-                    if (index > 0) {
-                        inputs[index - 1].focus();
-                    }
-                }
-            });
-        });
-    </script>
 </body>
