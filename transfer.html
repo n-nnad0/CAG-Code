@@ -243,11 +243,12 @@
                         <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
                         <li class="list-inline-item"><a href="#">Terms of Service</a></li>
                         <li class="list-inline-item"><a href="contact.html">Contact Us</a></li>
+                        <li class="list-inline-item"><a href="resource.html">Resources</a></li>
                     </ul>
                 </div>
             </div>
         </div>
-    </footer>
+    </footer>    
 
     <script>
         const exchangeRates = {
@@ -275,35 +276,27 @@
                 return;
             }
     
-            // Convert to SGD first (assuming SGD is our base currency)
             const amountInSGD = sendCurrency === 'SGD' ? sendAmount : sendAmount / exchangeRates[sendCurrency];
     
-            // Convert from SGD to receive currency
             const receiveAmount = amountInSGD * exchangeRates[receiveCurrency];
     
             console.log('Receive Amount:', receiveAmount);
-    
-            // Update receive input
+
             receiveInput.value = receiveAmount.toFixed(2);
     
-            // Update exchange rate display
             const exchangeRate = (exchangeRates[receiveCurrency] / exchangeRates[sendCurrency]).toFixed(4);
             document.querySelector('.exchange-rate').innerHTML = 
                 `Exchange Rate: 1 ${sendCurrency} = ${exchangeRate} ${receiveCurrency}`;
-    
-            // Update transfer fee (1% of send amount, minimum 1 SGD)
+
             const fee = Math.max(1, sendAmount * 0.01);
             document.querySelector('.transfer-info p:first-child').textContent = 
                 `Transfer Fee: ${fee.toFixed(2)} ${sendCurrency}`;
         }
     
-        // Add event listeners
         document.querySelector('.transfer-box:nth-of-type(1) input').addEventListener('input', performConversion);
         document.querySelectorAll('.currency-select').forEach(select => {
             select.addEventListener('change', performConversion);
         });
-    
-        // Initialize conversion
         document.addEventListener('DOMContentLoaded', performConversion);
     </script>
 </body>
