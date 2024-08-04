@@ -1,5 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- I declare that this code was written by me. 
+ I will not copy or allow others to copy my code. 
+ I understand that copying code is considered as plagiarism.
+ 
+ Student Name: NUR NIKI NADHILA BINTE MOHAMED ASRI
+ Student ID: 23021911
+ Class: W65F
+ Date/Time Last modified: 03/08/2024
+-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -107,6 +116,32 @@
         footer {
             flex-shrink: 0;
         }
+        .register-button-container {
+            position: absolute;
+            top: 50%;
+            right: 50px;
+            transform: translateY(-50%);
+        }
+
+        .btn-register {
+            background-color: #cdad7d;
+            color: #131e3d;
+            font-family: 'League Spartan', sans-serif;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 15px 30px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            border: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .btn-register:hover {
+            background-color: #b69663;
+            color: #131e3d;
+            transform: scale(1.05);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
     </style>
 </head>
 <body>
@@ -141,6 +176,9 @@
                 </button>
             </div>
         </div>
+        <div class="register-button-container">
+            <a href="register.html" id="registerButton" class="btn btn-register">Register!</a>
+        </div>
     </main>
 
     <footer class="bg-dark text-white py-4">
@@ -154,64 +192,20 @@
                     <ul class="list-inline">
                         <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
                         <li class="list-inline-item"><a href="#">Terms of Service</a></li>
-                        <li class="list-inline-item"><a href="#">Contact Us</a></li>
+                        <li class="list-inline-item"><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script>
-        // Function to handle smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    
-        // Function to add active class to current nav item
-        function setActiveNavItem() {
-            let currentPage = window.location.pathname.split("/").pop();
-            let navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-            navLinks.forEach(link => {
-                if (link.getAttribute('href') === currentPage) {
-                    link.classList.add('active');
-                }
-            });
-        }
-    
-        // Function to handle mobile menu toggle
+    <script>      
         function toggleMobileMenu() {
             const navbarCollapse = document.querySelector('.navbar-collapse');
             navbarCollapse.classList.toggle('show');
         }
     
-        // Event listener for mobile menu button
         document.querySelector('.navbar-toggler').addEventListener('click', toggleMobileMenu);
-    
-        // Logo button hover and click handlers
-        const logoButton = document.querySelector('.logo-button');
-        const logoImage = logoButton.querySelector('img');
-    
-        logoButton.addEventListener('mouseover', function() {
-            logoImage.style.transform = 'scale(1.05)';
-        });
-    
-        logoButton.addEventListener('mouseout', function() {
-            logoImage.style.transform = 'scale(1)';
-        });
-    
-        logoButton.addEventListener('click', function() {
-            window.location.href = 'index.html';
-        });
-    
-        // Call functions when the page loads
-        window.onload = function() {
-            setActiveNavItem();
-        };
         </script>
 </body>
 </html>
